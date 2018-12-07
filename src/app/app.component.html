@@ -1,3 +1,106 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+    <div class="lang">
+        <a (click)="changeLanguage('hn')">हिंदी</a>
+        <a (click)="changeLanguage('en')">English</a>
+    </div>
+    <div class="timeline-item">
+        <span>{{LABEL.born +' : '+ TR.dob}}</span>
+        <h1 style="margin-bottom: 6px;">{{TR.name}}</h1>
+        <img style="width: 150px;height: 150px;border-radius: 8px;" src="./assets/rr.jpg">
+        <div><strong>{{TR.occ}}</strong></div>
+        <p> {{TR.occDesc}}
+        </p>
+
+        <table class="rs">
+            <tbody>
+                <tr>
+                </tr>
+                <tr>
+                    <td>{{LABEL.fatherName}}</td>
+                    <td>{{TR.fatherName}}</td>
+                </tr>
+                <tr>
+                    <td>{{LABEL.brotherName}}</td>
+                    <td>{{TR.brotherName}}</td>
+                </tr>
+
+                <tr>
+                    <td>{{LABEL.sister}}</td>
+                    <td>{{TR.sister}}</td>
+                </tr>
+                <tr>
+                    <td>{{LABEL.height}}</td>
+                    <td [innerHTML]="TR.height"></td>
+                </tr>
+                <tr>
+                    <td>{{LABEL.caste}}</td>
+                    <td>{{TR.caste}}</td>
+                </tr>
+                <tr>
+                    <td>{{LABEL.gotra}}</td>
+                    <td>{{TR.gotra}}</td>
+                </tr>
+                <tr>
+                    <td>{{LABEL.mool}}</td>
+                    <td>{{TR.mool}}</td>
+                </tr>
+                <tr>
+                    <td>{{LABEL.address}}</td>
+                    <td [innerHTML]="TR.address"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="timeline-item">
+        <span>{{TR.matric.year}}</span>
+        <h1>{{LABEL.matric}}</h1>
+        <table class="border">
+            <tr>
+                <th>{{LABEL.university}}</th>
+                <th>{{LABEL.percentage}}</th>
+                <th>{{LABEL.division}}</th>
+            </tr>
+            <tr>
+                <td>{{TR.matric.university}}</td>
+                <td>{{TR.matric.percentage}}</td>
+                <td>{{TR.matric.division}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="timeline-item">
+        <span>{{TR.isc.year}}</span>
+        <h1>{{LABEL.isc}}</h1>
+        <table class="border">
+            <tr>
+                <th>{{LABEL.university}}</th>
+                <th>{{LABEL.percentage}}</th>
+                <th>{{LABEL.division}}</th>
+            </tr>
+            <tr>
+                <td>{{TR.isc.university}}</td>
+                <td>{{TR.isc.percentage}}</td>
+                <td>{{TR.isc.division}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="timeline-item">
+        <span>{{TR.bsc.year}}</span>
+        <h1>{{LABEL.bsc}}</h1>
+        <table class="border">
+            <tr>
+                <th>{{LABEL.university}}</th>
+                <th>{{LABEL.percentage}}</th>
+                <th>{{LABEL.division}}</th>
+            </tr>
+            <tr>
+                <td>{{TR.bsc.university}}</td>
+                <td>{{TR.bsc.percentage}}</td>
+                <td>{{TR.bsc.division}}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
